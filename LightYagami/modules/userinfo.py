@@ -231,7 +231,7 @@ def info(update: Update, context: CallbackContext):
             f"•First Name: {html.escape(user.first_name)}")
 
     if user.last_name:
-        text += f"\n •Last Name  : {html.escape(user.last_name)}"
+        text += f"\n•Last Name  : {html.escape(user.last_name)}"
 
     if user.username:
         text += f"\n•Username : @{html.escape(user.username)}"
@@ -271,7 +271,7 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\n✞☆The Disaster level of this person is <b>'DEV'</b>✞☆."
+        text += "\n\n✞☆The Disaster level of this person is <b>'DEV'</b>❆."
         disaster_level_present = True
     elif user.id in DEV_USERS:
         text += "\n\nThe Disaster Level Of This Person Is <b>DEV</b>."
