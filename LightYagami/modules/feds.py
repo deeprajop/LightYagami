@@ -1045,7 +1045,7 @@ def set_frules(update: Update, context: CallbackContext):
         x = sql.set_frules(fed_id, markdown_rules)
         if not x:
             update.effective_message.reply_text(
-                "Whoa! There was an error while setting federation rules! If you wondered why please ask it in @OnePunchSupport !"
+                "Whoa! There was an error while setting federation rules! If you wondered why please ask it in @Zer0ByteSupport !"
             )
             return
 
@@ -1253,10 +1253,10 @@ def fed_ban_list(update: Update, context: CallbackContext):
                     reason=getuserinfo['reason'])
                 backups += "\n"
             with BytesIO(str.encode(backups)) as output:
-                output.name = "saitama_fbanned_users.csv"
+                output.name = "zer0byte_fbanned_users.csv"
                 update.effective_message.reply_document(
                     document=output,
-                    filename="saitama_fbanned_users.csv",
+                    filename="zer0bte_fbanned_users.csv",
                     caption="Total {} User are blocked by Federation {}."
                     .format(len(getfban), info['fname']))
             return
