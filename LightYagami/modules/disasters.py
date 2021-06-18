@@ -512,7 +512,7 @@ def sudolist(update: Update, context: CallbackContext):
 def devlist(update: Update, context: CallbackContext):
     bot = context.bot
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "<b>👹Shinigamis💀:</b>\n"
+    reply = "<b>Zer0Byte Verifieds:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:
@@ -533,7 +533,7 @@ Group admins/group owners do not need these commands.
  ╠ `/demons`*:* Lists all Demon disasters
  ╠ `/tigers`*:* Lists all Tigers disasters
  ╠ `/wolves`*:* Lists all Wolf disasters
- ╠ `/Shinigamis`*:* Lists all Shinigamis(Dev Users)
+ ╠ `/0bytes`*:* Lists all Shinigamis(Dev Users)
  ╠ `/adddragon`*:* Adds a user to Dragon
  ╠ `/adddemon`*:* Adds a user to Demon
  ╠ `/addtiger`*:* Adds a user to Tiger
