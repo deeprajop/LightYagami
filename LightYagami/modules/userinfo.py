@@ -224,7 +224,7 @@ def info(update: Update, context: CallbackContext):
         return
 
     rep = message.reply_text(
-        "Lemme Find His/Her Info To Write Its Name On The <b>Death Note</b>", parse_mode=ParseMode.HTML)
+        "Lemme Find His/Her Info To Write Its Name On The <b>Zer0Byte Database</b>", parse_mode=ParseMode.HTML)
 
     text = (f"   「<b> The User's Info </b> 」    \n"
             f"ID: <code>{user.id}</code>\n"
