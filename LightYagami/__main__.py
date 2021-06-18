@@ -55,11 +55,9 @@ Bold_String = Start_text
 
 
 PM_START_TEXT = """
-Hey {}, This is Zer0Byte Group
+Hey **{}**, This is Zer0Byte Group
 
-Nice To See You Here
-
-This Bot Can Help Managing Your Super Group With Its Super Handy Features
+It Can Help You In Managing Your Group With Its Powerful Features! 
 Here You Can See My Power By Writing /help.
 """
 
@@ -224,7 +222,7 @@ def start(update: Update, context: CallbackContext):
                     ]]))
     else:
         update.effective_message.reply_video(
-                LIGHT_IMG, caption= "<b>✨ Zer0Byte Is Online! \nSince:</b><code>{}</code><b>✞_______</b>".format(
+                LIGHT_IMG, caption= "<b>✨ Zer0Byte Is Online! \n✪Since:</b><code>{}</code><b>✪</b>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -542,7 +540,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Time To Write Names On Death Note")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "❆ Zer0Byte ❆")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
