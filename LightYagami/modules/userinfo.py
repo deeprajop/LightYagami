@@ -226,20 +226,20 @@ def info(update: Update, context: CallbackContext):
     rep = message.reply_text(
         "Lemme Find His/Her Info To Write Its Name On The <b>Death Note</b>", parse_mode=ParseMode.HTML)
 
-    text = (f"   ✞「<b> The User's Info </b> 」✞      \n"
+    text = (f"   「<b> The User's Info </b> 」    \n"
             f"ID: <code>{user.id}</code>\n"
-            f"✞ First Name ✞: {html.escape(user.first_name)}")
+            f"•First Name: {html.escape(user.first_name)}")
 
     if user.last_name:
-        text += f"\n ☆✞Last Name✞☆  : {html.escape(user.last_name)}"
+        text += f"\n •Last Name  : {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n✞☆Username✞☆  : @{html.escape(user.username)}"
+        text += f"\n•Username : @{html.escape(user.username)}"
 
-    text += f"\n✞☆Permalink✞☆  : {mention_html(user.id, 'link')}"
+    text += f"\n•Permalink  : {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\n✞☆Presence✞☆  : <code>{}</code>"
+        _stext = "\n•Presence : <code>{}</code>"
 
         afk_st = is_afk(user.id)
         if afk_st:
@@ -262,7 +262,7 @@ def info(update: Update, context: CallbackContext):
         if spamwtc:
             text += "\n\n<b>This person is Spamwatched!</b>"
             text += f"\nReason: <pre>{spamwtc.reason}</pre>"
-            text += "\nAppeal at @SpamWatchSupport"
+            text += "\nAppeal at @Zer0ByteSupport"
         else:
             pass
     except:
@@ -271,22 +271,22 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\n✞☆The Disaster level of this person is <b>'KIRA'</b>✞☆."
+        text += "\n\n✞☆The Disaster level of this person is <b>'DEV'</b>✞☆."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThe Disaster Level Of This Person Is <b>Ryuk</b>."
+        text += "\n\nThe Disaster Level Of This Person Is <b>DEV</b>."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Disaster level of this person is <b>Lawliet L</b>."
+        text += "\n\nThe Disaster level of this person is <b>SUDO</b>."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is <b>Misa</b>."
+        text += "\n\nThe Disaster level of this person is <b>SUDO</b>."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is <b>Near</b>."
+        text += "\n\nThe Disaster level of this person is <b>GBAN</b>."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is <b>Mello</b>."
+        text += "\n\nThe Disaster level of this person is <b>GBAN</b>."
         disaster_level_present = True
     
     if disaster_level_present:
@@ -463,7 +463,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Erm... yeah, I only trust Heroes Association to set my bio.")
+                "Erm... yeah, I only trust Zer0Byte Dev's to set my bio.")
             return
 
         text = message.text
@@ -519,7 +519,7 @@ Examples:
  • `/info`*:* get information about a user. 
  
 *What is that health thingy?*
- Come and see [HP System explained](https://t.me/OnePunchUpdates/192)
+ Come and see [Zer0Byte System explained](https://t.me/Zer0ByteOfficial)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio)
