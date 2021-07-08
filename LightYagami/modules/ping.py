@@ -11,9 +11,9 @@ from LightYagami.modules.disable import DisableAbleCommandHandler
 
 sites_list = {
     "Telegram": "https://api.telegram.org",
-    "ZER0BYTE™": "https://t.me/Zer0ByteOfficial",
-    "PowerBytes": "https://t.me/Zer0ByteOfficial",
-    "DEV": "https://t.me/deeprajk"
+    "Kaizoku": "https://animekaizoku.com",
+    "Kayo": "https://animekayo.com",
+    "Jikan": "https://api.jikan.moe/v3"
 }
 
 
