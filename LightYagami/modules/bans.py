@@ -16,7 +16,7 @@ from LightYagami.modules.helper_funcs.string_handling import extract_time
 from LightYagami.modules.log_channel import gloggable, loggable
 
 
-Light_Pic = "https://telegra.ph/file/2e82dc07d1a0d2b0f1c11.mp4"
+Light_Pic = "CAACAgUAAx0CQ4zVqwAC8slg5nFJkb2ABdfqbNzGvZk77Z2SqgACZgMAAr9Z6VXmb2nfoF_tAAEgBA"
 Light_pic2 = "https://telegra.ph/file/b913ece1017624b2fe3ef.mp4"
 
 @run_async
@@ -50,37 +50,37 @@ def ban(update: Update, context: CallbackContext) -> str:
 
     if user_id == bot.id:
         message.reply_video(Light_pic2)
-        message.reply_text("Don't Take Me As Noob Like You I Am The Only One Who Kill L")
+        message.reply_text("So, You Want Me To Ban My Master? How Dumb Are You")
         return log_message
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
             message.reply_video(Light_pic2)
             message.reply_text(
-                "HE IS THE GOD THE REAL KIRA")
+                "HE IS MY MASTER")
             return log_message
         elif user_id in DEV_USERS:
-            message.reply_text("Dude You Can't Even See Ryuk")
+            message.reply_text("You cant Ban a DEV with his own CODES, Idiot")
             return log_message
         elif user_id in DRAGONS:
             message.reply_text(
-                "Only Kira Can Kill L And Obviously You Are Not Kira")
+                "He is the SUDO user, Cant Ban!")
             return log_message
         elif user_id in DEMONS:
             message.reply_text(
-                "Don't Dare To Touch Misa Dude"
+                "He is the SUDO user, Cant Ban!"
             )
             return log_message
         elif user_id in TIGERS:
             message.reply_text(
-                "Sorry But You Can't Reach To Near."
+                "He is the SUDO user, Cant Ban!"
             )
             return log_message
         elif user_id in WOLVES:
-            message.reply_text("Sorry But Mello Has The Ability Of That I can't Ban Him")
+            message.reply_text("Sorry But Mello Has The Ability Of That I can't Ban Him, SUDO Power")
             return log_message
         else:
-            message.reply_text("This user has immunity and cannot be banned.")
+            message.reply_text("This user is an Admin and cannot be banned.")
             return log_message
 
     log = (
@@ -261,7 +261,7 @@ def kill(update: Update, context: CallbackContext) -> str:
         return log
 
     else:
-        message.reply_text("Well damn, I can't kill that user with my death note.")
+        message.reply_text("Well damn, I can't kill that user with my super powers.")
 
     return log_message
 
@@ -282,9 +282,9 @@ def killme(update: Update, context: CallbackContext):
         user_id)  # unban on current user = kick
     if res:
         update.effective_message.reply_video(Light_Pic)
-        update.effective_message.reply_text("*Wrote Your Name On The Death Note*")
+        update.effective_message.reply_text("*Ban Hammer Smashed*")
     else:
-        update.effective_message.reply_text("Huh? My Pen Is Lost")
+        update.effective_message.reply_text("Huh? My Hammer Is Lost")
 
 
 @run_async
@@ -384,32 +384,32 @@ def selfunban(context: CallbackContext, update: Update) -> str:
 
 
 __help__ = """
- • `/killme`*:* kills the user who issued the command
+ • `/kickme`*:* kicks the user who issued the command
 
 *Admins only:*
  • `/ban <userhandle>`*:* bans a user. (via handle, or reply)
  • `/tban <userhandle> x(m/h/d)`*:* bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
  • `/unban <userhandle>`*:* unbans a user. (via handle, or reply)
- • `/kill <userhandle>`*:* killes a user out of the group, (via handle, or reply)
+ • `/kick <userhandle>`*:* kicks a user out of the group, (via handle, or reply)
 """
 
 BAN_HANDLER = CommandHandler("ban", ban)
 TEMPBAN_HANDLER = CommandHandler(["tban"], temp_ban)
-kill_HANDLER = CommandHandler("kill", kill)
+kick_HANDLER = CommandHandler("kick", kick)
 UNBAN_HANDLER = CommandHandler("unban", unban)
 ROAR_HANDLER = CommandHandler("roar", selfunban)
-killME_HANDLER = DisableAbleCommandHandler(
-    "killme", killme, filters=Filters.group)
+kickME_HANDLER = DisableAbleCommandHandler(
+    "kickme", kickme, filters=Filters.group)
 
 dispatcher.add_handler(BAN_HANDLER)
 dispatcher.add_handler(TEMPBAN_HANDLER)
-dispatcher.add_handler(kill_HANDLER)
+dispatcher.add_handler(kick_HANDLER)
 dispatcher.add_handler(UNBAN_HANDLER)
 dispatcher.add_handler(ROAR_HANDLER)
-dispatcher.add_handler(killME_HANDLER)
+dispatcher.add_handler(kickME_HANDLER)
 
 __mod_name__ = "Bans"
 __handlers__ = [
-    BAN_HANDLER, TEMPBAN_HANDLER, kill_HANDLER, UNBAN_HANDLER, ROAR_HANDLER,
-    killME_HANDLER
+    BAN_HANDLER, TEMPBAN_HANDLER, kick_HANDLER, UNBAN_HANDLER, ROAR_HANDLER,
+    kickME_HANDLER
 ]
