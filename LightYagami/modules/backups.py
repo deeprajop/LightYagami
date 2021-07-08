@@ -334,7 +334,7 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("LightYagami{}.backup".format(chat_id), "rb"),
+        document=open("Zer0Byte{}.backup".format(chat_id), "rb"),
         caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `Zer0Byte-Backup` was specially made for notes."
         .format(chat.title, chat_id, tgl),
         timeout=360,
