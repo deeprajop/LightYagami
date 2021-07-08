@@ -112,7 +112,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
         if (member.can_send_messages and member.can_send_media_messages and
                 member.can_send_other_messages and
                 member.can_add_web_page_previews):
-            message.reply_text("This user already has the right to speak.")
+            message.reply_text("This user isnt muted!")
         else:
             chat_permissions = ChatPermissions(
                 can_send_messages=True,
@@ -130,7 +130,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
                 pass
             bot.sendMessage(
                 chat.id,
-                f"I shall allow <b>{html.escape(member.user.first_name)}</b> to text!",
+                f"#UNMUTED <b>{html.escape(member.user.first_name)}</b> to text!",
                 parse_mode=ParseMode.HTML)
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
